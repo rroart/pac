@@ -1,0 +1,39 @@
+dnl Process this file with autoconf to produce a configure script.
+AC_INIT(board.h)
+
+#AM_CONFIG_HEADER(config.h)
+
+AM_INIT_AUTOMAKE(pacman, 1.001)
+
+AC_ARG_ENABLE(doublesize, 
+[  --enable-doublesize	  double the width and height ],
+extra_c_flags=-DDOUBLE=1)
+
+dnl Checks for programs.
+AC_PROG_CXX
+
+dnl Checks for libraries.
+dnl Replace `main' with a function in -lX11:
+AC_CHECK_LIB(X11, main)
+dnl Replace `main' with a function in -lcurses:
+AC_CHECK_LIB(curses, main)
+dnl Replace `main' with a function in -lsocket:
+AC_CHECK_LIB(socket, main)
+dnl Replace `main' with a function in -ltermcap:
+AC_CHECK_LIB(termcap, main)
+dnl Replace `main' with a function in -lucb:
+AC_CHECK_LIB(ucb, main)
+
+dnl Checks for header files.
+AC_PATH_X
+AC_HEADER_STDC
+AC_CHECK_HEADERS(sys/time.h unistd.h)
+
+dnl Checks for typedefs, structures, and compiler characteristics.
+AC_C_CONST
+AC_HEADER_TIME
+
+dnl Checks for library functions.
+AC_CHECK_FUNCS(gettimeofday)
+
+AC_OUTPUT(makefile error/test/makefile)
