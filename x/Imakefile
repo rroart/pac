@@ -1,3 +1,5 @@
+EXTRA_DEFINES = -DVERSION=\"1_002\" -DDOUBLE
+
 SRCS = arg.cc blank.cc board.cc bonus.cc bonuslif.cc bonuspnt.cc \
 	colour.cc corner.cc corner1.cc corner2.cc corner3.cc \
 	corner4.cc cross.cc direc.cc dynamiel.cc e0.cc e180.cc e270.cc \
@@ -22,7 +24,7 @@ CURSES = -lcurses -ltermcap
 
 /* most X11 screens are rather large, you might wisht to use "double" mode */
 /* CXXEXTRA_DEFINES = -DDOUBLE */
-CXXEXTRA_DEFINES = -DVERSION=\"1.001\"
+CXX_EXTRA_DEFINES = -DVERSION=\"1_002\" -DDOUBLE
 
 NormalProgramTarget(pacman,$(OBJS),$(DEPXLIB),$(CURSES),$(XLIB))
 InstallProgram(pacman,$(BINDIR))
