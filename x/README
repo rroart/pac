@@ -32,12 +32,17 @@ do the same by uncommenting in the Imakefile).
 
 COMPILING
 
-Two possibilities: use xmkmf or if that doesn't work, gen:
+UNIX:
+Two possibilities: use xmkmf or configure:
 
 xmkmf:  
 xmkmf -a        # this makes the Makefile and the dependencies
 		# continue and 
                 # try ordinary make even if xmkmf gives errors 
+
+configure:
+configure understands --enable-doublesize to make it higher and wider.
+
 make; make install; make clean
 #this uses Imakefile, which I am very fresh at...
 
@@ -48,4 +53,9 @@ gen:
 #individual compiler configurations. 
 gen
 make
+
+VMS:
+do
+rename *.cc *.cxx
+mms/ignore=warning
 
