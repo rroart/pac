@@ -11,4 +11,4 @@ timing.obj, usrinter.obj, vertwall.obj, walls.obj
 	cxx /define=(VMS,VERSION=1.001) $< /obj = sys$disk:[]$*.obj
 
 pacman.exe : $(objs)
-	link /exe=pacman.exe $(objs), pacman/opt
+	cxxlink /exe=pacman.exe $(objs), pacman/opt
