@@ -8,7 +8,7 @@ point.obj, specwall.obj, supefood.obj, t0.obj, t180.obj, t270.obj, t90.obj, -
 timing.obj, usrinter.obj, vertwall.obj, walls.obj
 
 .cxx.obj : 
-	cxx /define=(VERSION=1.001) $< /obj = sys$disk:[]$*.obj
+	cxx /define=(VMS,VERSION=1.001) $< /obj = sys$disk:[]$*.obj
 
 pacman.exe : $(objs)
 	link /exe=pacman.exe $(objs), pacman/opt
