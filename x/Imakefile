@@ -22,6 +22,7 @@ CURSES = -lcurses -ltermcap
 
 /* most X11 screens are rather large, you might wisht to use "double" mode */
 /* CXXEXTRA_DEFINES = -DDOUBLE */
+CXXEXTRA_DEFINES = -DVERSION=\"1.001\"
 
 NormalProgramTarget(pacman,$(OBJS),$(DEPXLIB),$(CURSES),$(XLIB))
 InstallProgram(pacman,$(BINDIR))

@@ -32,7 +32,7 @@ void writetext(); //just draw text
 #define BONUSSCORE 1000	//the score you get when you eat each bonuspoint
                   
 //change my name and you will be sued!!!!!!!!!!!!!!!!!!!!!!!!!!
-#define PACTITLE "Pacman v. 1.0 (1995.07.18) \xa9 1995 by Roar Thron\xe6s"
+#define PACTITLE "Pacman v. "VERSION" \xa9 1995 by Roar Thron\xe6s"
 // Copyright 1995 by Roar Thronaes
                   
 #endif  
