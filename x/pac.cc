@@ -12,10 +12,6 @@
 #include"timing.h"
 #include"arg.h"
 
-#ifdec PACQT
-#include<qapplication.h>
-#endif
- 
 // routine to make the game exit if there was a previous detected error
  
 void pacexit(char *s) { 
