@@ -1,16 +1,25 @@
 dnl Process this file with autoconf to produce a configure script.
 AC_INIT(board.h)
 
+AC_CANONICAL_SYSTEM
+
 #AM_CONFIG_HEADER(config.h)
 
-AM_INIT_AUTOMAKE(pacman, 1.001)
+AM_INIT_AUTOMAKE(pacman, 1_002)
+
+case "$target" in
+*-*-vms*) vms=1;;
+*-*-*) CXXFLAGS=-O2;;
+esac
 
 AC_ARG_ENABLE(doublesize, 
 [  --enable-doublesize	  double the width and height ],
-extra_c_flags=-DDOUBLE=1)
+CXXFLAGS=${CXXFLAGS}" -DDOUBLE=1")
 
 dnl Checks for programs.
 AC_PROG_CXX
+
+AM_CONDITIONAL(ISVMS, test x$vms = x1)
 
 dnl Checks for libraries.
 dnl Replace `main' with a function in -lX11:
@@ -36,4 +45,4 @@ AC_HEADER_TIME
 dnl Checks for library functions.
 AC_CHECK_FUNCS(gettimeofday)
 
-AC_OUTPUT(makefile error/test/makefile)
+AC_OUTPUT(Makefile)
