@@ -1,4 +1,14 @@
+AUTOMAKE_OPTIONS=dist-zip
+EXTRA_DIST = Imakefile pacman.opt descrip.mms
+
 bin_PROGRAMS = pacman
+
+if ISVMS
+vms=1
+else
+pacman_LDADD = -lX11
+pacman_LDFLAGS = -s
+endif
 
 pacman_SOURCES = arg.cc blank.cc board.cc bonus.cc bonuslif.cc bonuspnt.cc \
 	colour.cc corner.cc corner1.cc corner2.cc corner3.cc \
