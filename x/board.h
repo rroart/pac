@@ -23,7 +23,7 @@ static int foods=168;	//how many food items there are on each board
 
 #define initen {0}
 
-static char boards[LEVELS][BOARDHEIGHT+1][BOARDWIDTH+1];
+//static char boards[][][];
 
 class DynamicElement;
 class G_Board; 
