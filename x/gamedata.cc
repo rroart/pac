@@ -1,6 +1,7 @@
 #include"gamedata.h"
 #include"board.h"
 #include"pac.h"
+#include<stdlib.h>
 
 Gamedata* Gamedata::_instance=0;
 long  int Gamedata::hiscore=0;
