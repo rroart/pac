@@ -56,6 +56,7 @@ for(i=-1;i<=1;i++) 	//traverse the elements around x,y
   t='\0';//null
   if (i+x==-1 || i+x==BOARDWIDTH) t=' ';	//if x,y is on border
   if (j+y==-1 || j+y==BOARDHEIGHT) t=' ';	//then space is what's beyond it
+  if (i+x==-1 || j+y==-1) u=' '; else
   u=brett1[y+j][x+i];				//what's at x+i,y+j coordinates
   if (u=='_') u='O';				//if u is a specialwall then 
 						//it is just a wall 
