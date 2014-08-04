@@ -3,9 +3,9 @@
 .\" This program is free software.  See the file COPYING for a list
 .\" of conditions.
 .\"
-.TH PACMAN 1
+.TH PACMAN 6
 .SH NAME
-pacman - the game of pacman
+pacman \- the game of pacman
 .SH SYNOPSIS
 .B "pacman"
 [grey]
